@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --fuente-titulo: 'Fredoka', sans-serif;
+    --fuente-cuerpo: 'Quicksand', sans-serif;
+    
+    /* Paleta Lover / Katzen Pastel */
+    --rosa-lover: #ffb7b2;
+    --lila-lover: #e8dbfc;
+    --celeste-lover: #b3e5fc;
+    --texto-oscuro: #4a3b52;
+    --blanco-cristal: rgba(255, 255, 255, 0.88);
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    color: var(--texto-oscuro);
+    font-family: var(--fuente-cuerpo);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tu hermosa imagen de Pinterest como fondo suave de toda la app */
+    background: linear-gradient(rgba(240, 235, 255, 0.45), rgba(255, 235, 240, 0.45)), 
+                url('https://i.pinimg.com/1200x/13/d6/24/13d624efee9651fbc56841050f8c9620.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor { 
+    width: 100%; 
+    max-width: 850px; 
+}
+
+/* PORTADA PRINCIPAL LINDISIMA */
+header.portada-miaw {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(10px);
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(232, 219, 252, 0.5);
+    margin-bottom: 35px;
+}
+
+header.portada-miaw h1 {
+    font-family: var(--fuente-titulo);
+    color: #b07bb0;
+    font-size: 3.2rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+header.portada-miaw p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6b5b7b;
+}
+
+.badge-autor {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffb7b2, #e8dbfc);
+    color: #4a3b52;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+    border: 2px solid white;
+}
+
+/* SECCIONES COMPLEMENTARIAS */
+section.modulo-miaw {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    border: 2px solid white;
+}
+
+h2.titulo-seccion {
+    font-family: var(--fuente-titulo);
+    color: #8fa3e6;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.descripcion { 
+    line-height: 1.8; 
+    font-size: 1.1rem; 
+    color: #5d4e66; 
+}
+
+/* MENU GRID Y EL EFECTO FLOTAR (SOLICITADO) */
+.menu-eras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.tarjeta-era {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 25px;
+    border: 3px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Transición suave para la animación */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* ACCIÓN DE FLOTAR AL PASAR EL MOUSE */
+.tarjeta-era:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(255, 183, 178, 0.6);
+}
+
+/* FORMULARIOS Y CASILLAS */
+form.formulario-miaw { 
+    margin: 20px 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.input-miaw {
+    width: 100%;
+    padding: 16px;
+    border: 3px solid #fff;
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.input-miaw:focus { 
+    border-color: var(--rosa-lover); 
+    background: white;
+}
+
+button.btn-miaw, a.btn-miaw {
+    background: linear-gradient(135deg, #ffb7b2, #e8dbfc);
+    color: var(--texto-oscuro);
+    padding: 16px;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(232, 219, 252, 0.4);
+    transition: 0.3s;
+}
+
+button.btn-miaw:hover, a.btn-miaw:hover { 
+    background: linear-gradient(135deg, #e8dbfc, #ffb7b2);
+    transform: translateY(-2px);
+}
+
+/* CAJA DE RESULTADOS CLARA Y HERMOSA CON TIPOGRAFÍA LINDA (CORREGIDO DE NEGRO A CLARO) */
+.zona-resultado {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px dashed #ffb7b2;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+}
+
+.caja-texto-resultado {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    color: #4a3b52; /* Letras oscuras legibles sobre fondo claro */
+    padding: 10px 5px;
+}
+
+.pie-miaw { margin-top: 40px; text-align: center; }
+.links-git { display: flex; gap: 25px; justify-content: center; }
+.links-git a { text-decoration: none; color: #8ba3e6; font-weight: 700; font-size: 1.05rem; }
+.btn-regresar { display: inline-block; margin-top: 20px; text-decoration: none; color: #b07bb0; font-weight: 700; }

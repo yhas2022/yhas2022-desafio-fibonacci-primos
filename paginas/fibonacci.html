@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Concierto Era - Fibonacci</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="p-fibonacci">
+
+    <div class="contenedor">
+        <header class="portada-miaw">
+            <h1>🎵 Plan de Ahorro: Concierto Era 🎵</h1>
+            <p>Proyecto: The Eras Miaw</p>
+            <span class="badge-autor">Yhasbel Alejandra Guarachi Gutierrez 👑</span>
+        </header>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">📋 Contexto del Problema Real</h2>
+            <p class="descripcion">
+                <b>El Problema:</b> Planificar las finanzas personales para asistir a eventos masivos suele ser difícil debido a que los esquemas fijas de ahorro causan desmotivación. 
+                <br><br>
+                <b>La Solución:</b> Implementamos un simulador que calcula cuántas canciones de un setlist puedes patrocinar según tu capital actual, asumiendo que el costo de cada canción consecutiva incrementa siguiendo la lógica acumulativa de Fibonacci. De esta forma, el usuario entiende la tasa de inflación orgánica de un presupuesto en vivo.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">📚 ¿Qué es la Sucesión de Fibonacci y cómo funciona?</h2>
+            <p class="descripcion">
+                La <b>Sucesión de Fibonacci</b> es una serie infinita de números enteros donde cada nuevo término se obtiene sumando estrictamente los dos anteriores. Comienza de forma estándar con $0$ y $1$, modelando el crecimiento biológico:
+                $$0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...$$
+                <b>¿Cómo se hace el algoritmo?</b> Para cumplir las reglas de optimización de memoria sin usar vectores (`[]`), empleamos tres variables flotantes independientes en un ciclo <code>for</code>. Declaramos <code>a = 0</code> y <code>b = 1</code>; en cada iteración calculamos el siguiente paso con <code>c = a + b</code>, y rotamos los valores asignando el valor de <code>b</code> a la variable <code>a</code>, y el nuevo resultado <code>c</code> a la variable <code>b</code>.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">🧮 Simulador Financiero</h2>
+            <form class="formulario-miaw" onsubmit="event.preventDefault(); simularConcierto();">
+                <label>Ingresa tus fondos totales para inversión (en Bs.):</label>
+                <input type="number" id="presupuestoInput" class="input-miaw" min="1" required placeholder="Ej. 100">
+                <button type="submit" class="btn-miaw">Procesar Viabilidad de Compra</button>
+            </form>
+
+            <div id="boxResultadoFib" class="zona-resultado">
+                <h3>📊 Balance de Caja Generado:</h3>
+                <div id="resFibonacci" class="caja-texto-resultado">Define un monto base para realizar la auditoría...</div>
+            </div>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">🌱 Conclusión</h2>
+            <p class="descripcion">
+                La interconexión matemática entre el crecimiento exponencial y el control financiero digital nos enseña que el software predictivo previene déficits monetarios antes de realizar inversiones logísticas.
+            </p>
+            <a href="../index.html" class="btn-regresar">← Volver al Inicio</a>
+        </section>
+
+        <footer class="pie-miaw">
+            <div class="links-git">
+                <a href="https://github.com/yhas2022/desafio-fibonacci-primos" target="_blank">📂 Repositorio Git</a>
+                <a href="https://yhas2022.github.io/desafio-fibonacci-primos/" target="_blank">🌐 Página Publicada</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

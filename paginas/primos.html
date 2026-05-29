@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Seguridad Era - Números Primos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="p-primos">
+
+    <div class="contenedor">
+        <header class="portada-miaw">
+            <h1>🔒 Validador Criptográfico Clic 🔒</h1>
+            <p>Proyecto: The Eras Miaw</p>
+            <span class="badge-autor">Yhasbel Alejandra Guarachi Gutierrez 👑</span>
+        </header>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">📋 Contexto del Problema Real</h2>
+            <p class="descripcion">
+                <b>El Problema:</b> Las brechas de seguridad digital exponen contraseñas numéricas débiles diariamente a través de ataques cibernéticos relacionales de fuerza bruta.
+                <br><br>
+                <b>La Solución:</b> Creamos un filtro de auditoría que evalúa la estructura íntima de un PIN numérico. Si el sistema corrobora que la clave es un número primo, certifica que posee inmunidad matemática frente a factores lineales de descomposición rápida.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">📚 ¿Qué es un Número Primo y cómo se valida?</h2>
+            <p class="descripcion">
+                Un <b>Número Primo</b> es aquel número entero mayor que $1$ que posee una restricción aritmética estricta: únicamente puede dividirse de forma exacta entre el número $1$ y entre sí mismo. Si un valor tiene más divisores, se cataloga automáticamente como número compuesto.
+                <br><br>
+                <b>¿Cómo se hace el algoritmo?</b> El sistema toma la contraseña, inicializa un acumulador de control en cero y ejecuta un ciclo iterativo <code>for</code> que recorre consecutivamente desde el número 1 hasta el valor evaluado. En cada vuelta, aplica el operador aritmético de residuo (<code>%</code>). Si el residuo es exactamente 0, incrementa el acumulador. Al romperse el ciclo, si el contador marca exactamente 2 divisiones exitosas, el programa dictamina validez criptográfica.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">🧮 Consola de Auditoría</h2>
+            <form class="formulario-miaw" onsubmit="event.preventDefault(); jugarEscapeRoom();">
+                <label>Inserta el PIN de seguridad a evaluar:</label>
+                <input type="number" id="codigoPrimoInput" class="input-miaw" min="1" required placeholder="Ej. 17">
+                <button type="submit" class="btn-miaw">Auditar Firma Digital</button>
+            </form>
+
+            <div id="boxResultadoPri" class="zona-resultado">
+                <h3>🛡️ Diagnóstico de Seguridad Real:</h3>
+                <div id="resPrimos" class="caja-texto-resultado">Esperando ingreso de credenciales...</div>
+            </div>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">🌱 Conclusión</h2>
+            <p class="descripcion">
+                La factorización y el estudio estructural de los números primos componen los pilares fundamentales que mantienen resguardada la información bancaria y los datos privados del internet global.
+            </p>
+            <a href="../index.html" class="btn-regresar">← Volver al Inicio</a>
+        </section>
+
+        <footer class="pie-miaw">
+            <div class="links-git">
+                <a href="https://github.com/yhas2022/desafio-fibonacci-primos" target="_blank">📂 Repositorio Git</a>
+                <a href="https://yhas2022.github.io/desafio-fibonacci-primos/" target="_blank">🌐 Página Publicada</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

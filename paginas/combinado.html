@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Híbrido - Combo Era</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header class="portada-miaw">
+            <h1>📡 Radar de Selección de Datos VIP 📡</h1>
+            <p>Proyecto: The Eras Miaw</p>
+            <span class="badge-autor">Yhasbel Alejandra Guarachi Gutierrez 👑</span>
+        </header>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">📋 Contexto del Problema Real</h2>
+            <p class="descripcion">
+                <b>El Problema:</b> Las bases de datos masivas contienen millones de registros planos mezclados que causan sobrecarga de procesamiento analítico humano.
+                <br><br>
+                <b>La Solución:</b> Este módulo emula un filtrado predictivo buscando comportamientos específicos (primalidad) dentro de progresiones biológicas estandarizadas (Sucesión de Fibonacci), aislando los asientos críticos VIP de un estadio de forma automatizada.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">⚙️ Explicación Científica del Algoritmo</h2>
+            <p class="descripcion">
+                El motor ejecuta un bucle iterativo anidado sin usar vectores para optimizar la caché. 
+                <br><br>
+                <b>1. Serie de Fibonacci:</b> Se calcula sumando los dos números anteriores ($F_n = F_{n-1} + F_{n-2}$) partiendo de $0$ y $1$. 
+                <br>
+                <b>2. Filtro de Primalidad:</b> Cada número generado es transferido a un sub-bucle interno que analiza si posee exactamente dos divisores en todo el universo de números enteros. Si pasa ambas pruebas, se cataloga como Hito VIP.
+            </p>
+        </section>
+
+        <section class="modulo-miaw">
+            <h2 class="titulo-seccion">🎛️ Panel de Control</h2>
+            <form class="formulario-miaw" onsubmit="event.preventDefault(); escanearRadarVIP();">
+                <label>Elementos de la progresión a rastrear:</label>
+                <input type="number" id="limiteRadarInput" class="input-miaw" min="1" max="40" required placeholder="Ej. 12">
+                <button type="submit" class="btn-miaw">Correr Diagnóstico</button>
+            </form>
+
+            <div class="zona-resultado">
+                <h3>📊 Coincidencias Identificadas:</h3>
+                <div id="resCombo" class="caja-texto-resultado">Configura el límite para iniciar el rastreo...</div>
+            </div>
+        </section>
+
+        <section class="modulo-miaw" style="text-align: center;">
+            <h2 class="titulo-seccion">🌱 Conclusión</h2>
+            <p class="descripcion">
+                El filtrado algorítmico jerárquico demuestra la capacidad del software para automatizar análisis lógicos masivos reduciendo errores manuales.
+            </p>
+            <a href="../index.html" class="btn-regresar">← Volver al Menú Principal</a>
+        </section>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
